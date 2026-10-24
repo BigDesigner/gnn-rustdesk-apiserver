@@ -6,13 +6,11 @@
 // 1. YAPILANDIRMA (CONFIG)
 // ==========================================
 const CONFIG = {
-  // Cloudflare R2 üzerindeki GNNQS.exe doğrudan indirme bağlantınız.
-  // R2 Özel Alan Adı (Custom Domain) veya R2 Public dev URL'si:
-  // Örn: 'https://dl.gnn.tr/GNNQS.exe' veya 'https://pub-xxxxxxxxxx.r2.dev/GNNQS.exe'
-  downloadUrl: 'https://dl.gnn.tr/GNNQS.exe',
+  // Cloudflare Pages Function (/download) üzerinden R2'den dinamik indirme
+  downloadUrl: '/download',
 
   // İndirilecek dosya adı
-  fileName: 'GNNQS.exe',
+  fileName: 'GNNQS.zip',
 
   // Otomatik indirme bekleme süresi (Milisaniye cinsinden - 2000ms = 2 sn)
   delayMs: 2000,
