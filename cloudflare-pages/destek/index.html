@@ -696,23 +696,13 @@
     <!-- Üst Başlık (Header) -->
     <header class="header">
       <div class="logo-area">
-        <div class="logo-badge">
-          <svg class="icon-brand" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            <path d="m9 12 2 2 4-4"/>
-          </svg>
-        </div>
+        <img src="icon.png" alt="GNN Logo" style="width: 36px; height: 36px; border-radius: 8px; object-fit: contain; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
         <div class="brand-text">
           <span class="brand-title">GNN <span class="highlight">DESTEK</span></span>
           <span class="brand-subtitle">Hızlı Uzaktan Yardım</span>
         </div>
       </div>
-      <div class="header-nav">
-        <a href="/console" class="btn-console" title="Yönetici Girişi">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-          <span>Yönetici Konsolu</span>
-        </a>
-      </div>
+
     </header>
 
     <!-- İndirme Alanı (Hero) -->
@@ -771,6 +761,19 @@
           </div>
         </div>
       </section>
+
+      <!-- GÜVENLİK BİLGİLENDİRME INFOBOX -->
+      <div class="security-infobox" style="max-width: 680px; margin: 1.5rem auto 2.5rem auto; background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(56, 189, 248, 0.35); border-left: 4px solid #38bdf8; border-radius: 10px; padding: 1.15rem 1.4rem; display: flex; align-items: flex-start; gap: 1rem; box-shadow: 0 4px 16px rgba(0,0,0,0.3);">
+        <div style="background: rgba(56, 189, 248, 0.15); border-radius: 8px; width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #38bdf8;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+        </div>
+        <div>
+          <h4 style="font-size: 0.95rem; font-weight: 700; color: #f0f2f5; margin-bottom: 0.25rem;">Önemli Güvenlik Bilgilendirmesi</h4>
+          <p style="font-size: 0.88rem; color: #cbd5e1; line-height: 1.55; margin: 0;">
+            GNN Uzaktan Destek oturumları <strong>256-bit TLS şifrelemesi</strong> ile korunur. Siz kimlik (ID) ve şifrenizi yetkili destek uzmanımızla paylaşmadıkça <strong>bilgisayarınıza hiç kimse erişemez</strong>.
+          </p>
+        </div>
+      </div>
 
       <!-- Nasıl Bağlantı Sağlanır? (Görsel ve Kolay Anlaşılır 3 Adım) -->
       <section class="instructions-section">
@@ -892,14 +895,11 @@
 
       <!-- Alt Bilgi / Güvenlik Bildirimi -->
       <footer class="site-footer">
-        <div class="footer-note">
-          <span>GNN Uzaktan Destek oturumları 256-bit TLS şifrelemesi ile korunur. Siz kimlik ve şifrenizi paylaşmadıkça bilgisayarınıza hiç kimse erişemez.</span>
-        </div>
         <div style="display: flex; gap: 0.85rem; align-items: center; justify-content: center; flex-wrap: wrap;">
-        <p class="copyright">© <span id="currentYear"></span> GNN Destek Servisi. Tüm hakları saklıdır.</p>
-        <span style="color: var(--text-dim);">&bull;</span>
-        <a href="/console" style="color: var(--text-muted); font-size: 0.78rem; text-decoration: none;">GnnDesk Console</a>
-      </div>
+          <p class="copyright">© <span id="currentYear"></span> GNN Destek Servisi. Tüm hakları saklıdır.</p>
+          <span style="color: var(--text-dim);">&bull;</span>
+          <a href="/console" style="color: var(--text-dim); font-size: 0.75rem; text-decoration: none; opacity: 0.45; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='0.45'" title="Yönetici Konsolu">GnnDesk Console</a>
+        </div>
       </footer>
     </main>
   </div>
