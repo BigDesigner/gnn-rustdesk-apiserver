@@ -1,0 +1,23 @@
+{
+  "tags": [
+    "Genel",
+    "Müşteri",
+    "GNN"
+  ],
+  "peers": [
+    {
+      "id": "123456789",
+      "username": "",
+      "hostname": "Ornek-Cihaz",
+      "platform": "Windows",
+      "alias": "Muhasebe-PC",
+      "tags": [
+        "GNN",
+        "Genel"
+      ],
+      "note": "Ornek aciklama",
+      "hash": ""
+    }
+  ],
+  "tag_colors": "{\"Genel\":4286141768,\"Müşteri\":4291681337,\"GNN\":4294198070}"
+}

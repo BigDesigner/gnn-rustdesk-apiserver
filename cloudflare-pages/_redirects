@@ -1,0 +1,12 @@
+# Cloudflare Pages 302 Yönlendirmeleri
+# İndirme istekleri doğrudan Cloudflare R2 CDN üzerinden karşılanır
+/indir      https://dl.gnn.tr/GNNQS.exe 302
+/download   https://dl.gnn.tr/GNNQS.exe 302
+/GNNQS.exe  https://dl.gnn.tr/GNNQS.exe 302
+/gnnqs.exe  https://dl.gnn.tr/GNNQS.exe 302
+/GNNQS.zip  https://dl.gnn.tr/GNNQS.zip 302
+/gnnqs.zip  https://dl.gnn.tr/GNNQS.zip 302
+
+# RustDesk Sunucu Yönetim Konsolu Kısayolları (Kendi sunucu adresinizi yazınız)
+/console    http://rustdesk.example.com:21114/ 302
+/panel      http://rustdesk.example.com:21114/ 302

@@ -1,0 +1,16 @@
+[Unit]
+Description=GNN RustDesk Minimal API Server & Console Dashboard
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/rustdesk-api
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=-/opt/rustdesk-api/.env
+ExecStart=/usr/bin/python3 /opt/rustdesk-api/server.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
