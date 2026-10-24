@@ -1,7 +1,8 @@
 export async function onRequest(context) {
-  const target = context.env.DOWNLOAD_URL;
+  const env = context.env || {};
+  const target = env.DOWNLOAD_URL || env.download_url;
   if (target) {
-    return Response.redirect(target, 302);
+    return Response.redirect(target.trim(), 302);
   }
-  return new Response("DOWNLOAD_URL ortam degiskeni bulunamadi.", { status: 500 });
+  return Response.redirect("/download", 302);
 }

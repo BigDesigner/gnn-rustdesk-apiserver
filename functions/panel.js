@@ -1,7 +1,8 @@
 export async function onRequest(context) {
-  const target = context.env.CONSOLE_URL;
+  const env = context.env || {};
+  const target = env.CONSOLE_URL || env.console_url;
   if (target) {
-    return Response.redirect(target, 302);
+    return Response.redirect(target.trim(), 302);
   }
-  return new Response("CONSOLE_URL ortam degiskeni bulunamadi.", { status: 500 });
+  return Response.redirect("/console", 302);
 }
