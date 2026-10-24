@@ -131,6 +131,9 @@ class RustDeskAPIHandler(BaseHTTPRequestHandler):
         data = html_content.encode("utf-8")
         self.send_response(status_code)
         self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
+        self.send_header("Pragma", "no-cache")
+        self.send_header("Expires", "0")
         self.send_header("Content-Length", str(len(data)))
         if set_cookie:
             self.send_header("Set-Cookie", set_cookie)
@@ -1037,12 +1040,12 @@ def render_console(data):
                 <div class="table-toolbar">
                     <div class="table-title">Devices ({len(peers)})</div>
                     <div class="toolbar-actions">
-                        <a href="/web/export/csv" class="btn-toolbar-sec" title="Rehberi CSV (Excel) olarak indir">
-                            <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        <a href="/web/export/csv" class="btn-toolbar-sec" style="display:inline-flex; align-items:center; gap:0.45rem; background:#232733; border:1px solid #323849; color:#c9d1d9; padding:0.42rem 0.85rem; border-radius:6px; font-size:0.83rem; text-decoration:none; font-weight:500; line-height:1.4;" title="Rehberi CSV (Excel) olarak indir">
+                            <svg width="15" height="15" viewBox="0 0 24 24" style="width:15px; height:15px; max-width:15px; max-height:15px; flex-shrink:0; fill:currentColor;"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
                             <span>Dışa Aktar (CSV)</span>
                         </a>
-                        <button type="button" class="btn-toolbar-sec" onclick="openImportCsvModal()" title="CSV dosyasından cihazları içe aktar">
-                            <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/></svg>
+                        <button type="button" class="btn-toolbar-sec" onclick="openImportCsvModal()" style="display:inline-flex; align-items:center; gap:0.45rem; background:#232733; border:1px solid #323849; color:#c9d1d9; padding:0.42rem 0.85rem; border-radius:6px; font-size:0.83rem; font-weight:500; cursor:pointer; line-height:1.4;" title="CSV dosyasından cihazları içe aktar">
+                            <svg width="15" height="15" viewBox="0 0 24 24" style="width:15px; height:15px; max-width:15px; max-height:15px; flex-shrink:0; fill:currentColor;"><path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/></svg>
                             <span>İçe Aktar (CSV)</span>
                         </button>
                         <button type="button" class="btn-add-device" onclick="openAddDeviceModal()">+ Add</button>
