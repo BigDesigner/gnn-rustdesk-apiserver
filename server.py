@@ -884,9 +884,8 @@ def render_console(data):
         .toolbar-actions {{ display: flex; align-items: center; gap: 0.65rem; }}
         .btn-add-device {{ background: var(--primary); color: #fff; border: none; padding: 0.45rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; }}
         .btn-add-device:hover {{ background: var(--primary-hover); }}
-        .btn-toolbar-sec {{ background: #232733; border: 1px solid var(--border); color: #c9d1d9; padding: 0.45rem 0.85rem; border-radius: 6px; font-weight: 500; font-size: 0.85rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.45rem; cursor: pointer; line-height: 1.4; transition: all 0.2s; }}
-        .btn-toolbar-sec:hover {{ background: #2c3240; border-color: var(--primary); color: #fff; }}
-        .btn-toolbar-sec svg {{ width: 16px; height: 16px; flex-shrink: 0; fill: currentColor; }}
+        .btn-csv-action {{ background: #232733; color: #c9d1d9; border: 1px solid #323849; padding: 0.45rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; }}
+        .btn-csv-action:hover {{ background: #2c3240; border-color: var(--primary); color: #fff; }}
 
         /* Table */
         .table-container {{ background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }}
@@ -1040,14 +1039,8 @@ def render_console(data):
                 <div class="table-toolbar">
                     <div class="table-title">Devices ({len(peers)})</div>
                     <div class="toolbar-actions">
-                        <a href="/web/export/csv" class="btn-toolbar-sec" style="display:inline-flex; align-items:center; gap:0.45rem; background:#232733; border:1px solid #323849; color:#c9d1d9; padding:0.42rem 0.85rem; border-radius:6px; font-size:0.83rem; text-decoration:none; font-weight:500; line-height:1.4;" title="Rehberi CSV (Excel) olarak indir">
-                            <svg width="15" height="15" viewBox="0 0 24 24" style="width:15px; height:15px; max-width:15px; max-height:15px; flex-shrink:0; fill:currentColor;"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                            <span>Dışa Aktar (CSV)</span>
-                        </a>
-                        <button type="button" class="btn-toolbar-sec" onclick="openImportCsvModal()" style="display:inline-flex; align-items:center; gap:0.45rem; background:#232733; border:1px solid #323849; color:#c9d1d9; padding:0.42rem 0.85rem; border-radius:6px; font-size:0.83rem; font-weight:500; cursor:pointer; line-height:1.4;" title="CSV dosyasından cihazları içe aktar">
-                            <svg width="15" height="15" viewBox="0 0 24 24" style="width:15px; height:15px; max-width:15px; max-height:15px; flex-shrink:0; fill:currentColor;"><path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z"/></svg>
-                            <span>İçe Aktar (CSV)</span>
-                        </button>
+                        <a href="/web/export/csv" class="btn-csv-action" style="background:#232733; color:#c9d1d9; border:1px solid #323849; padding:0.45rem 1rem; border-radius:6px; font-weight:600; font-size:0.85rem; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; cursor:pointer;" title="Export CSV">Export CSV</a>
+                        <button type="button" class="btn-csv-action" onclick="openImportCsvModal()" style="background:#232733; color:#c9d1d9; border:1px solid #323849; padding:0.45rem 1rem; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;" title="Import CSV">Import CSV</button>
                         <button type="button" class="btn-add-device" onclick="openAddDeviceModal()">+ Add</button>
                     </div>
                 </div>
